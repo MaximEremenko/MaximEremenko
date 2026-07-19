@@ -1,6 +1,6 @@
 ## Maxim Eremenko
 
-Research Scientist at ORNL / Theiss Research — materials science, scattering methods, and scientific software.
+Research Scientist at ORNL / Theiss Research — physics, high-performance computing, and scientific software.
 
 📍 Oak Ridge, TN · 📫 [erjomenko@gmail.com](mailto:erjomenko@gmail.com) · 💻 [github.com/MaximEremenko](https://github.com/MaximEremenko) · 🎓 [Google Scholar](https://scholar.google.com/citations?user=kJCFRkUAAAAJ) · 🆔 [ORCID](https://orcid.org/0000-0002-2875-968X) · 💼 [LinkedIn](https://www.linkedin.com/in/maksim-eremenko-417270109/)
 
@@ -30,4 +30,4 @@ Some of these tools may in the future also be distributed under the ORNL "neutro
 
 More in the [repositories tab](https://github.com/MaximEremenko?tab=repositories).
 
-**Stack:** JavaScript + WebGPU/WGSL, WebAssembly (h5wasm), and Plotly in the browser · Python (Dask, optional GPU) for MOSAIC · HDF5 as the common data layer · R for BBest · alongside the Fortran-based RMCProfile ecosystem.
+**Stack:** C/C++ · CUDA · Python (PyTorch, TensorFlow, Dask) · Rust · JavaScript + WebGPU/WGSL · WebAssembly · R · MPI / HPC clusters · HDF5.
