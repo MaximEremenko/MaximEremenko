@@ -1,6 +1,6 @@
 ## Maxim Eremenko
 
-Research Scientist at ORNL / Theiss Research — disordered crystalline materials, single-crystal diffuse scattering, total scattering, and RMC-based atomistic modeling.
+Research Scientist at ORNL / Theiss Research — materials science, scattering methods, and scientific software.
 
 📍 Oak Ridge, TN · 📫 [erjomenko@gmail.com](mailto:erjomenko@gmail.com) · 💻 [github.com/MaximEremenko](https://github.com/MaximEremenko) · 🎓 [Google Scholar](https://scholar.google.com/citations?user=kJCFRkUAAAAJ) · 🆔 [ORCID](https://orcid.org/0000-0002-2875-968X) · 💼 [LinkedIn](https://www.linkedin.com/in/maksim-eremenko-417270109/)
 
