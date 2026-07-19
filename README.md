@@ -19,7 +19,7 @@ All Apache-2.0; output from one tool loads directly in the others.
 <!-- Optional sentence; edit or delete as distribution plans settle: -->
 Some of these tools may in the future also be distributed under the ORNL "neutrons" GitHub organization.
 
-### 🗂️ What you will find here
+### 🗂️ Selected projects
 
 - **[Utilities](https://github.com/MaximEremenko/Utilities)** — the original browser-tools monorepo, with a [GitHub Pages docs site](https://maximeremenko.github.io/Utilities/) (user guide, worked examples, theory, and bibliography for the diffuse-scattering tool). Also home to companion utilities: Select Subvolume, PCA KDE, PCA SDE, and Background Remover, plus the tools above while they finish moving to their own repositories.
 - **[MOSAIC](https://github.com/MaximEremenko/MOSAIC)** — a Python framework linking selected diffuse-scattering features to site-resolved chemical-order and displacement fields via a linear, phase-preserving workflow (scattering amplitudes, reciprocal-space masking, inverse Fourier transforms), with optional GPU acceleration and Dask-based parallel execution.
@@ -27,5 +27,7 @@ Some of these tools may in the future also be distributed under the ORNL "neutro
 - **wgpuFFT** — a Rust WebGPU FFT/NUFFT library (type-1/2/3 NUFFTs, rank-generic N-dimensional plans, native f64 and portable double-float precision, WebAssembly/browser support) — the Rust counterpart of the WebGPU-FFT/NUFFT line, publication in preparation.
 - **[UnifiedStructureFileFormat](https://github.com/MaximEremenko/UnifiedStructureFileFormat)** and **[UnifiedIntensityFileFormat](https://github.com/MaximEremenko/UnifiedIntensityFileFormat)** — proposals for unified HDF5 file formats for atomistic structures and 3-D diffuse / 3D-PDF data: the shared data contract the tools above read and write.
 - **[BBest](https://github.com/MaximEremenko/BBest)** — an updated version of the BBEST R package for Bayesian background estimation, removing incoherent scattering from neutron total-scattering data (original method by Gagin & Levin).
+
+More in the [repositories tab](https://github.com/MaximEremenko?tab=repositories).
 
 **Stack:** JavaScript + WebGPU/WGSL, WebAssembly (h5wasm), and Plotly in the browser · Python (Dask, optional GPU) for MOSAIC · HDF5 as the common data layer · R for BBest · alongside the Fortran-based RMCProfile ecosystem.
