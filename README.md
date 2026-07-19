@@ -4,13 +4,11 @@ Research Scientist at ORNL / Theiss Research — disordered crystalline material
 
 📍 Oak Ridge, TN · 📫 [erjomenko@gmail.com](mailto:erjomenko@gmail.com) · 💻 [github.com/MaximEremenko](https://github.com/MaximEremenko) · 🎓 [Google Scholar](https://scholar.google.com/citations?user=kJCFRkUAAAAJ) · 🆔 [ORCID](https://orcid.org/0000-0002-2875-968X) · 💼 [LinkedIn](https://www.linkedin.com/in/maksim-eremenko-417270109/)
 
-The most interesting physics in a crystal often lives in what the average structure leaves out. Bragg peaks tell you where atoms sit *on average*; the weak, structured diffuse scattering between them records how the material actually departs from that average — chemical short-range order, correlated displacements, local polar order. My work sits at that boundary: connecting single-crystal diffuse scattering and total-scattering data to real-space atomic arrangements through large-supercell atomistic modeling, primarily within the RMCProfile (reverse Monte Carlo) ecosystem.
-
-This GitHub is a working bench, not a showroom. A central thread here is the idea that diffuse-scattering analysis tools should be **browser-native**: fully client-side, nothing to install, nothing uploaded. Open a single HTML page, drop in a structure or a 3-D intensity volume, and compute, slice, or convert it locally — your files never leave your machine. The tools share one open HDF5 data contract, so they compose with each other and with RMCProfile, DISCUS, Yell, and Scatty.
+Browser-based tools for diffuse-scattering and local-structure analysis of disordered crystalline materials. Everything runs fully client-side — no installation, no server, no uploads — and the applications share a unified HDF5 data contract, interoperating with RMCProfile, DISCUS, Yell, Meerkat, and Scatty.
 
 ### 🔬 Featured research tools
 
-Three standalone, fully client-side browser applications (Apache-2.0) built around a shared unified HDF5 data contract — output from one loads directly in the others.
+All Apache-2.0; output from one tool loads directly in the others.
 
 | Tool | What it does | Technical highlights |
 | --- | --- | --- |
@@ -30,14 +28,4 @@ Some of these tools may in the future also be distributed under the ORNL "neutro
 - **[UnifiedStructureFileFormat](https://github.com/MaximEremenko/UnifiedStructureFileFormat)** and **[UnifiedIntensityFileFormat](https://github.com/MaximEremenko/UnifiedIntensityFileFormat)** — proposals for unified HDF5 file formats for atomistic structures and 3-D diffuse / 3D-PDF data: the shared data contract the tools above read and write.
 - **[BBest](https://github.com/MaximEremenko/BBest)** — an updated version of the BBEST R package for Bayesian background estimation, removing incoherent scattering from neutron total-scattering data (original method by Gagin & Levin).
 
-### 🛠️ How I tend to build
-
-- **Client-side by default.** Scientific data can be large, proprietary, or embargoed; tools that run entirely in the browser sidestep installation, servers, and uploads at once.
-- **Degrade gracefully.** WebGPU when available, CPU FFT when not, direct summation when precision must be beyond doubt.
-- **Verify against a slower truth.** GPU fp32 paths ship next to direct-summation CPU references; the format converter is validated file-by-file against the output of each producing program, with round-trips exact at double precision.
-- **Open, shared data contracts.** One unified HDF5 format across tools and codes beats N pairwise converters — though the converter exists for everything already out there.
-- **Minimal dependencies.** Plain script tags over build systems; critical libraries (h5wasm) vendored for reproducibility.
-- **Documentation as part of the tool.** User guide, worked examples with benchmark files, the theory behind the equations, and a bibliography ship together.
-- **Permissive licensing.** Apache-2.0 and MIT throughout, with third-party components (such as NIST's h5wasm) clearly attributed.
-
-**Current stack:** JavaScript + WebGPU/WGSL, WebAssembly (h5wasm), and Plotly in the browser · Python (Dask, optional GPU) for MOSAIC · HDF5 as the common data layer · R for BBest · alongside the Fortran-based RMCProfile ecosystem.
+**Stack:** JavaScript + WebGPU/WGSL, WebAssembly (h5wasm), and Plotly in the browser · Python (Dask, optional GPU) for MOSAIC · HDF5 as the common data layer · R for BBest · alongside the Fortran-based RMCProfile ecosystem.
