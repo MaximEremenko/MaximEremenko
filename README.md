@@ -4,9 +4,9 @@ Research Scientist at ORNL / Theiss Research — physics, high-performance compu
 
 📍 Oak Ridge, TN · 📫 [erjomenko@gmail.com](mailto:erjomenko@gmail.com) · 💻 [github.com/MaximEremenko](https://github.com/MaximEremenko) · 🎓 [Google Scholar](https://scholar.google.com/citations?user=kJCFRkUAAAAJ) · 🆔 [ORCID](https://orcid.org/0000-0002-2875-968X) · 💼 [LinkedIn](https://www.linkedin.com/in/maksim-eremenko-417270109/)
 
-Browser-based tools for diffuse-scattering and local-structure analysis of disordered crystalline materials. Everything runs fully client-side — no installation, no server, no uploads — and the applications share a unified HDF5 data contract, interoperating with RMCProfile, DISCUS, Yell, Meerkat, and Scatty.
-
 ### 🔬 Featured research tools
+
+Browser-based tools for diffuse-scattering and local-structure analysis of disordered crystalline materials. Everything runs fully client-side — no installation, no server, no uploads — and the applications share a unified HDF5 data contract, interoperating with RMCProfile, DISCUS, Yell, Meerkat, and Scatty.
 
 All Apache-2.0; output from one tool loads directly in the others.
 
@@ -16,9 +16,6 @@ All Apache-2.0; output from one tool loads directly in the others.
 | [3DSView](https://github.com/MaximEremenko/3DSView) | Interactive slicer for pre-computed 3-D diffuse volumes: axis, arbitrary-normal-plane, and slab-average slicing with linked 2-D heatmap, 3-D plane, and 3-D isosurface views | Reads RMCProfile 3DS text, unified HDF5, DISCUS/Yell HDF5, and generic NeXus; Q/HKL-aware axes with unit-cell override and delta-PDF (3D-PDF) support; large text files are streamed, parsed in parallel Web Workers, and cached in IndexedDB for near-instant reloads |
 | [3DSConvert](https://github.com/MaximEremenko/3DSConvert) | Converts 3-D single-crystal diffuse data between the formats used by RMCProfile, DISCUS, Yell, Meerkat, and Scatty — any format to any other, input auto-detected | Unified HDF5, Yell 1.0 HDF5, RMCProfile `.dat`, and Scatty `.vtk`; parent-cell handling from `.rmc6f` or unified structure files; fully self-contained (vendored WebAssembly h5wasm, runs from `file://`); validated against real output files from each producer, with round-trip conversions exact at double precision |
 
-<!-- Optional sentence; edit or delete as distribution plans settle: -->
-Some of these tools may in the future also be distributed under the ORNL "neutrons" GitHub organization.
-
 ### 🗂️ Selected projects
 
 - **[3DSCalculator](https://github.com/MaximEremenko/3DSCalculator)** — forward calculator of 3-D diffuse scattering I(*hkl*) from atomistic models, in the browser (WebGPU / CPU engines).
@@ -26,8 +23,6 @@ Some of these tools may in the future also be distributed under the ORNL "neutro
 - **[MOSAIC](https://github.com/MaximEremenko/MOSAIC)** — a Python framework linking selected diffuse-scattering features to site-resolved chemical-order and displacement fields via a linear, phase-preserving workflow (scattering amplitudes, reciprocal-space masking, inverse Fourier transforms), with optional GPU acceleration and Dask-based parallel execution.
 - **[WebGPU-NUFFT](https://github.com/MaximEremenko/WebGPU-NUFFT)** and **[WebGPU-FFT](https://github.com/MaximEremenko/WebGPU-FFT)** — MIT-licensed JavaScript/WGSL libraries for GPU non-uniform and uniform FFTs in the browser; WebGPU-FFT uses a plan-based execution model with FFT/DCT/convolution support, and WebGPU-NUFFT powers the calculator's WebGPU path (served via jsDelivr).
 - **wgpuFFT** — a Rust WebGPU FFT/NUFFT library (type-1/2/3 NUFFTs, rank-generic N-dimensional plans, native f64 and portable double-float precision, WebAssembly/browser support) — the Rust counterpart of the WebGPU-FFT/NUFFT line, publication in preparation.
-- **[UnifiedStructureFileFormat](https://github.com/MaximEremenko/UnifiedStructureFileFormat)** and **[UnifiedIntensityFileFormat](https://github.com/MaximEremenko/UnifiedIntensityFileFormat)** — proposals for unified HDF5 file formats for atomistic structures and 3-D diffuse / 3D-PDF data: the shared data contract the tools above read and write.
-- **[Utilities](https://github.com/MaximEremenko/Utilities)** — more browser tools: Select Subvolume, PCA KDE, PCA SDE, Background Remover.
 
 More in the [repositories tab](https://github.com/MaximEremenko?tab=repositories).
 
