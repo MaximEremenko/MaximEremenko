@@ -1,0 +1,43 @@
+## Maxim Eremenko
+
+Research Scientist at ORNL / Theiss Research — disordered crystalline materials, single-crystal diffuse scattering, total scattering, and RMC-based atomistic modeling.
+
+📍 Oak Ridge, TN · 📫 [erjomenko@gmail.com](mailto:erjomenko@gmail.com) · 💻 [github.com/MaximEremenko](https://github.com/MaximEremenko)
+<!-- Add when ready: ORCID · Google Scholar · LinkedIn · personal website -->
+
+The most interesting physics in a crystal often lives in what the average structure leaves out. Bragg peaks tell you where atoms sit *on average*; the weak, structured diffuse scattering between them records how the material actually departs from that average — chemical short-range order, correlated displacements, local polar order. My work sits at that boundary: connecting single-crystal diffuse scattering and total-scattering data to real-space atomic arrangements through large-supercell atomistic modeling, primarily within the RMCProfile (reverse Monte Carlo) ecosystem.
+
+This GitHub is a working bench, not a showroom. A central thread here is the idea that diffuse-scattering analysis tools should be **browser-native**: fully client-side, nothing to install, nothing uploaded. Open a single HTML page, drop in a structure or a 3-D intensity volume, and compute, slice, or convert it locally — your files never leave your machine. The tools share one open HDF5 data contract, so they compose with each other and with RMCProfile, DISCUS, Yell, and Scatty.
+
+### 🔬 Featured research tools
+
+Three standalone, fully client-side browser applications (Apache-2.0) built around a shared unified HDF5 data contract — output from one loads directly in the others.
+
+| Tool | What it does | Technical highlights |
+| --- | --- | --- |
+| [Diffuse scattering calculator](https://github.com/MaximEremenko/diffuse-scattering-calculator) | Forward calculator: computes the 3-D diffuse intensity I(*hkl*) in reciprocal space directly from atomistic configurations (RMCProfile `.rmc6f`, LAMMPS data files, unified structure HDF5) and visualizes it as interactive 3-D isosurfaces, slice planes, and 2-D maps | Type-3 NUFFT on a user-defined *hkl* grid with three engines — WebGPU, CPU FFT, and direct CPU summation for verification; neutron, X-ray, and electron scattering tables; average-lattice subtraction and 3-D smoothing; exports to `.dat`, unified HDF5, ParaView `.vtk`, `.cube`, CSV/SVG, and standalone Plotly HTML |
+| [Diffuse slice viewer](https://github.com/MaximEremenko/diffuse-slice-viewer) | Interactive slicer for pre-computed 3-D diffuse volumes: axis, arbitrary-normal-plane, and slab-average slicing with linked 2-D heatmap, 3-D plane, and 3-D isosurface views | Reads RMCProfile 3DS text, unified HDF5, DISCUS/Yell HDF5, and generic NeXus; Q/HKL-aware axes with unit-cell override and delta-PDF (3D-PDF) support; large text files are streamed, parsed in parallel Web Workers, and cached in IndexedDB for near-instant reloads |
+| [DiffuseConvert](https://github.com/MaximEremenko/diffuse-convert) | Converts 3-D single-crystal diffuse data between the formats used by RMCProfile, DISCUS, Yell, Meerkat, and Scatty — any format to any other, input auto-detected | Unified HDF5, Yell 1.0 HDF5, RMCProfile `.dat`, and Scatty `.vtk`; parent-cell handling from `.rmc6f` or unified structure files; fully self-contained (vendored WebAssembly h5wasm, runs from `file://`); validated against real output files from each producer, with round-trip conversions exact at double precision |
+
+<!-- Optional sentence; edit or delete as distribution plans settle: -->
+Some of these tools may in the future also be distributed under the ORNL "neutrons" GitHub organization.
+
+### 🗂️ What you will find here
+
+- **[Utilities](https://github.com/MaximEremenko/Utilities)** — the original browser-tools monorepo, with a [GitHub Pages docs site](https://maximeremenko.github.io/Utilities/) (user guide, worked examples, theory, and bibliography for the diffuse-scattering tool). Also home to companion utilities: Select Subvolume, PCA KDE, PCA SDE, and Background Remover, plus the tools above while they finish moving to their own repositories.
+- **[MOSAIC](https://github.com/MaximEremenko/MOSAIC)** — a Python framework linking selected diffuse-scattering features to site-resolved chemical-order and displacement fields via a linear, phase-preserving workflow (scattering amplitudes, reciprocal-space masking, inverse Fourier transforms), with optional GPU acceleration and Dask-based parallel execution.
+- **[WebGPU-NUFFT](https://github.com/MaximEremenko/WebGPU-NUFFT)** and **[WebGPU-FFT](https://github.com/MaximEremenko/WebGPU-FFT)** — MIT-licensed JavaScript/WGSL libraries for GPU non-uniform and uniform FFTs in the browser; WebGPU-FFT uses a plan-based execution model with FFT/DCT/convolution support, and WebGPU-NUFFT powers the calculator's WebGPU path (served via jsDelivr).
+- **[UnifiedStructureFileFormat](https://github.com/MaximEremenko/UnifiedStructureFileFormat)** and **[UnifiedIntensityFileFormat](https://github.com/MaximEremenko/UnifiedIntensityFileFormat)** — proposals for unified HDF5 file formats for atomistic structures and 3-D diffuse / 3D-PDF data: the shared data contract the tools above read and write.
+- **[BBest](https://github.com/MaximEremenko/BBest)** — an updated version of the BBEST R package for Bayesian background estimation, removing incoherent scattering from neutron total-scattering data (original method by Gagin & Levin).
+
+### 🛠️ How I tend to build
+
+- **Client-side by default.** Scientific data can be large, proprietary, or embargoed; tools that run entirely in the browser sidestep installation, servers, and uploads at once.
+- **Degrade gracefully.** WebGPU when available, CPU FFT when not, direct summation when precision must be beyond doubt.
+- **Verify against a slower truth.** GPU fp32 paths ship next to direct-summation CPU references; the format converter is validated file-by-file against the output of each producing program, with round-trips exact at double precision.
+- **Open, shared data contracts.** One unified HDF5 format across tools and codes beats N pairwise converters — though the converter exists for everything already out there.
+- **Minimal dependencies.** Plain script tags over build systems; critical libraries (h5wasm) vendored for reproducibility.
+- **Documentation as part of the tool.** User guide, worked examples with benchmark files, the theory behind the equations, and a bibliography ship together.
+- **Permissive licensing.** Apache-2.0 and MIT throughout, with third-party components (such as NIST's h5wasm) clearly attributed.
+
+**Current stack:** JavaScript + WebGPU/WGSL, WebAssembly (h5wasm), and Plotly in the browser · Python (Dask, optional GPU) for MOSAIC · HDF5 as the common data layer · R for BBest · alongside the Fortran-based RMCProfile ecosystem.
