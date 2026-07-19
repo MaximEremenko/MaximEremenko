@@ -2,8 +2,7 @@
 
 Research Scientist at ORNL / Theiss Research — disordered crystalline materials, single-crystal diffuse scattering, total scattering, and RMC-based atomistic modeling.
 
-📍 Oak Ridge, TN · 📫 [erjomenko@gmail.com](mailto:erjomenko@gmail.com) · 💻 [github.com/MaximEremenko](https://github.com/MaximEremenko)
-<!-- Add when ready: ORCID · Google Scholar · LinkedIn · personal website -->
+📍 Oak Ridge, TN · 📫 [erjomenko@gmail.com](mailto:erjomenko@gmail.com) · 💻 [github.com/MaximEremenko](https://github.com/MaximEremenko) · 🎓 [Google Scholar](https://scholar.google.com/citations?user=kJCFRkUAAAAJ) · 🆔 [ORCID](https://orcid.org/0000-0002-2875-968X) · 💼 [LinkedIn](https://www.linkedin.com/in/maksim-eremenko-417270109/)
 
 The most interesting physics in a crystal often lives in what the average structure leaves out. Bragg peaks tell you where atoms sit *on average*; the weak, structured diffuse scattering between them records how the material actually departs from that average — chemical short-range order, correlated displacements, local polar order. My work sits at that boundary: connecting single-crystal diffuse scattering and total-scattering data to real-space atomic arrangements through large-supercell atomistic modeling, primarily within the RMCProfile (reverse Monte Carlo) ecosystem.
 
@@ -27,6 +26,7 @@ Some of these tools may in the future also be distributed under the ORNL "neutro
 - **[Utilities](https://github.com/MaximEremenko/Utilities)** — the original browser-tools monorepo, with a [GitHub Pages docs site](https://maximeremenko.github.io/Utilities/) (user guide, worked examples, theory, and bibliography for the diffuse-scattering tool). Also home to companion utilities: Select Subvolume, PCA KDE, PCA SDE, and Background Remover, plus the tools above while they finish moving to their own repositories.
 - **[MOSAIC](https://github.com/MaximEremenko/MOSAIC)** — a Python framework linking selected diffuse-scattering features to site-resolved chemical-order and displacement fields via a linear, phase-preserving workflow (scattering amplitudes, reciprocal-space masking, inverse Fourier transforms), with optional GPU acceleration and Dask-based parallel execution.
 - **[WebGPU-NUFFT](https://github.com/MaximEremenko/WebGPU-NUFFT)** and **[WebGPU-FFT](https://github.com/MaximEremenko/WebGPU-FFT)** — MIT-licensed JavaScript/WGSL libraries for GPU non-uniform and uniform FFTs in the browser; WebGPU-FFT uses a plan-based execution model with FFT/DCT/convolution support, and WebGPU-NUFFT powers the calculator's WebGPU path (served via jsDelivr).
+- **wgpuFFT** — a Rust WebGPU FFT/NUFFT library (type-1/2/3 NUFFTs, rank-generic N-dimensional plans, native f64 and portable double-float precision, WebAssembly/browser support) — the Rust counterpart of the WebGPU-FFT/NUFFT line, publication in preparation.
 - **[UnifiedStructureFileFormat](https://github.com/MaximEremenko/UnifiedStructureFileFormat)** and **[UnifiedIntensityFileFormat](https://github.com/MaximEremenko/UnifiedIntensityFileFormat)** — proposals for unified HDF5 file formats for atomistic structures and 3-D diffuse / 3D-PDF data: the shared data contract the tools above read and write.
 - **[BBest](https://github.com/MaximEremenko/BBest)** — an updated version of the BBEST R package for Bayesian background estimation, removing incoherent scattering from neutron total-scattering data (original method by Gagin & Levin).
 
