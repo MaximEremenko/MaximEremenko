@@ -21,13 +21,14 @@ Some of these tools may in the future also be distributed under the ORNL "neutro
 
 ### 🗂️ Selected projects
 
-- **[Select Subvolume](https://maximeremenko.github.io/Utilities/RMCProfileUtilities/Select_Subvolume/RMC6f_Select_Subvolume_App.html)** — browser tool for cutting sub-volumes out of large `.rmc6f` atomistic configurations.
-- **[PCA KDE](https://maximeremenko.github.io/Utilities/RMCProfileUtilities/PCA_KDE/PCA_KDE_rmcdisplacements.html)** and **[PCA SDE](https://maximeremenko.github.io/Utilities/RMCProfileUtilities/PCA_SDE/PCA_SDE_rmcdisplacements.html)** — browser tools for PCA-based analysis of atomic displacements in RMC configurations (kernel / spherical density estimates).
-- **[Background Remover](https://maximeremenko.github.io/Utilities/RMCProfileUtilities/Background_Remover/Background_Remover.html)** — interactive background subtraction for scattering data. All four ship in the [Utilities](https://github.com/MaximEremenko/Utilities) collection.
+- **[3DSForge](https://github.com/MaximEremenko/3DSForge)** — forward calculator of 3-D diffuse scattering I(*hkl*) from atomistic models, in the browser (WebGPU / CPU engines).
+- **[3DSView](https://github.com/MaximEremenko/3DSView)** — interactive slicer and viewer for pre-computed 3-D diffuse-scattering volumes.
+- **[3DSConvert](https://github.com/MaximEremenko/3DSConvert)** — converter between the RMCProfile, DISCUS, Yell, Meerkat, and Scatty diffuse-data formats.
 - **[MOSAIC](https://github.com/MaximEremenko/MOSAIC)** — a Python framework linking selected diffuse-scattering features to site-resolved chemical-order and displacement fields via a linear, phase-preserving workflow (scattering amplitudes, reciprocal-space masking, inverse Fourier transforms), with optional GPU acceleration and Dask-based parallel execution.
 - **[WebGPU-NUFFT](https://github.com/MaximEremenko/WebGPU-NUFFT)** and **[WebGPU-FFT](https://github.com/MaximEremenko/WebGPU-FFT)** — MIT-licensed JavaScript/WGSL libraries for GPU non-uniform and uniform FFTs in the browser; WebGPU-FFT uses a plan-based execution model with FFT/DCT/convolution support, and WebGPU-NUFFT powers the calculator's WebGPU path (served via jsDelivr).
 - **wgpuFFT** — a Rust WebGPU FFT/NUFFT library (type-1/2/3 NUFFTs, rank-generic N-dimensional plans, native f64 and portable double-float precision, WebAssembly/browser support) — the Rust counterpart of the WebGPU-FFT/NUFFT line, publication in preparation.
 - **[UnifiedStructureFileFormat](https://github.com/MaximEremenko/UnifiedStructureFileFormat)** and **[UnifiedIntensityFileFormat](https://github.com/MaximEremenko/UnifiedIntensityFileFormat)** — proposals for unified HDF5 file formats for atomistic structures and 3-D diffuse / 3D-PDF data: the shared data contract the tools above read and write.
+- **[Utilities](https://github.com/MaximEremenko/Utilities)** — more browser tools: Select Subvolume, PCA KDE, PCA SDE, Background Remover.
 
 More in the [repositories tab](https://github.com/MaximEremenko?tab=repositories).
 
