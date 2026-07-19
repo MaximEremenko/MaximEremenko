@@ -23,7 +23,6 @@ Some of these tools may in the future also be distributed under the ORNL "neutro
 
 - **[3DSForge](https://github.com/MaximEremenko/3DSForge)** — forward calculator of 3-D diffuse scattering I(*hkl*) from atomistic models, in the browser (WebGPU / CPU engines).
 - **[3DSView](https://github.com/MaximEremenko/3DSView)** — interactive slicer and viewer for pre-computed 3-D diffuse-scattering volumes.
-- **[3DSConvert](https://github.com/MaximEremenko/3DSConvert)** — converter between the RMCProfile, DISCUS, Yell, Meerkat, and Scatty diffuse-data formats.
 - **[MOSAIC](https://github.com/MaximEremenko/MOSAIC)** — a Python framework linking selected diffuse-scattering features to site-resolved chemical-order and displacement fields via a linear, phase-preserving workflow (scattering amplitudes, reciprocal-space masking, inverse Fourier transforms), with optional GPU acceleration and Dask-based parallel execution.
 - **[WebGPU-NUFFT](https://github.com/MaximEremenko/WebGPU-NUFFT)** and **[WebGPU-FFT](https://github.com/MaximEremenko/WebGPU-FFT)** — MIT-licensed JavaScript/WGSL libraries for GPU non-uniform and uniform FFTs in the browser; WebGPU-FFT uses a plan-based execution model with FFT/DCT/convolution support, and WebGPU-NUFFT powers the calculator's WebGPU path (served via jsDelivr).
 - **wgpuFFT** — a Rust WebGPU FFT/NUFFT library (type-1/2/3 NUFFTs, rank-generic N-dimensional plans, native f64 and portable double-float precision, WebAssembly/browser support) — the Rust counterpart of the WebGPU-FFT/NUFFT line, publication in preparation.
