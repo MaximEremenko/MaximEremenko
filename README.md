@@ -8,7 +8,7 @@ Research Scientist at ORNL / Theiss Research — physics, high-performance compu
 
 Browser-based tools for diffuse-scattering and local-structure analysis of disordered crystalline materials. Everything runs fully client-side — no installation, no server, no uploads — and the applications share a unified HDF5 data contract, interoperating with RMCProfile, DISCUS, Yell, Meerkat, and Scatty.
 
-All Apache-2.0; output from one tool loads directly in the others.
+All Apache-2.0; output from one tool loads directly in the others. Live: [3DSCalculator](https://maximeremenko.github.io/3DSCalculator/) · [3DSView](https://maximeremenko.github.io/3DSView/) · [3DSConvert](https://maximeremenko.github.io/3DSConvert/).
 
 | Tool | What it does | Technical highlights |
 | --- | --- | --- |
