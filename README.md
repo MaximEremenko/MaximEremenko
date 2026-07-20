@@ -22,7 +22,7 @@ All Apache-2.0; output from one tool loads directly in the others. Source code: 
 - **[3DSView](https://github.com/MaximEremenko/3DSView)** — interactive slicer and viewer for pre-computed 3-D diffuse-scattering volumes.
 - **[MOSAIC](https://github.com/MaximEremenko/MOSAIC)** — a Python framework linking selected diffuse-scattering features to site-resolved chemical-order and displacement fields via a linear, phase-preserving workflow (scattering amplitudes, reciprocal-space masking, inverse Fourier transforms), with optional GPU acceleration and Dask-based parallel execution.
 - **[WebGPU-NUFFT](https://github.com/MaximEremenko/WebGPU-NUFFT)** and **[WebGPU-FFT](https://github.com/MaximEremenko/WebGPU-FFT)** — MIT-licensed JavaScript/WGSL libraries for GPU non-uniform and uniform FFTs in the browser; WebGPU-FFT uses a plan-based execution model with FFT/DCT/convolution support, and WebGPU-NUFFT powers the calculator's WebGPU path (served via jsDelivr).
-- **wgpuFFT** — a Rust WebGPU FFT/NUFFT library (type-1/2/3 NUFFTs, rank-generic N-dimensional plans, native f64 and portable double-float precision, WebAssembly/browser support) — the Rust counterpart of the WebGPU-FFT/NUFFT line, publication in preparation.
+- **[wgpuFFT](https://github.com/MaximEremenko/wgpuFFT)** — a Rust WebGPU FFT/NUFFT library (type-1/2/3 NUFFTs, rank-generic N-dimensional plans, native f64 and portable double-float precision, WebAssembly/browser support) — the Rust counterpart of the WebGPU-FFT/NUFFT line.
 
 More in the [repositories tab](https://github.com/MaximEremenko?tab=repositories).
 
