@@ -45,6 +45,6 @@ If these tools or methods help your research, please cite them — it is what ke
 
 - **MOSAIC** — M. Eremenko, V. Krayzman, M. G. Tucker, I. Levin, *arXiv:2607.10440* (2026), [doi:10.48550/arXiv.2607.10440](https://doi.org/10.48550/arXiv.2607.10440). Software metadata: [CITATION.cff](https://github.com/MaximEremenko/MOSAIC/blob/main/CITATION.cff).
 - **3DSCalculator, 3DSView, 3DSConvert, wgpuNUFFT, wgpuFFT, and the other tools** — cite the software by name and repository URL, for example: M. Eremenko, *3DSCalculator* (software), https://github.com/MaximEremenko/3DSCalculator.
-- **Nanoscale reverse Monte Carlo refinements** — M. Eremenko *et al.*, *J. Appl. Cryst.* **50**, 1561–1570 (2017), [doi:10.1107/S1600576717013140](https://doi.org/10.1107/S1600576717013140).
+- **Reverse Monte Carlo methods** — M. Eremenko *et al.*, *J. Appl. Cryst.* **50**, 1561–1570 (2017), [doi:10.1107/S1600576717013140](https://doi.org/10.1107/S1600576717013140).
 
 **Stack:** C/C++ · CUDA · Python (PyTorch, TensorFlow, Dask) · Rust · JavaScript + WebGPU/WGSL · WebAssembly · R · MPI / HPC clusters · HDF5.
